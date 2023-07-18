@@ -22,7 +22,10 @@ let package = Package(
   targets: [
     .target(
       name: "MarkdownUI",
-      dependencies: []
+      dependencies: [
+        .product(name: "cmark-gfm", package: "swift-cmark"),
+        .product(name: "cmark-gfm-extensions", package: "swift-cmark")
+      ]
     ),
     .testTarget(
       name: "MarkdownUITests",
